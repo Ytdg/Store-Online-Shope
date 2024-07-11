@@ -80,7 +80,7 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.kotlinx.collections.immutable)
     implementation(libs.navigation.compose)
-    implementation(project(":core:extensions-ui"))
+    implementation(project(":core:components-ui"))
     implementation(project(":main:data"))
 
 

@@ -24,7 +24,7 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import com.example.feature_products.events.EventsFilter
 import com.example.feature_products.models.ValuePlaceHolderFilter
-import com.example.feature_products.ui.components.TextFieldColor
+import com.example.feature_products.ui.components.OutlineTextFieldColor
 import com.example.feature_products.util.keyBoardAsState
 import com.example.feature_products.util.toStringNotNull
 
@@ -62,7 +62,7 @@ fun TextFieldsPriceFilter(
                 singleLine = true,
                 visualTransformation = VisualTransformation.None,
                 interactionSource = interactionSource,
-                colors = TextFieldColor(),
+                colors = OutlineTextFieldColor(),
                 contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
                     top = 0.dp,
                     bottom = 0.dp,
@@ -103,7 +103,7 @@ fun TextFieldsPriceFilter(
                 singleLine = true,
                 visualTransformation = VisualTransformation.None,
                 interactionSource = interactionSource,
-                colors = TextFieldColor(),
+                colors = OutlineTextFieldColor(),
                 contentPadding = TextFieldDefaults.contentPaddingWithoutLabel(
                     top = 0.dp,
                     bottom = 0.dp,

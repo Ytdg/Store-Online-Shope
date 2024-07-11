@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.TextFieldColors
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.LaunchedEffect
@@ -239,8 +240,11 @@ internal fun Animation(
 
 
 @Composable
-fun TextFieldColor(): TextFieldColors {
-
+fun OutlineTextFieldColor(): TextFieldColors {
+    val color = TextFieldDefaults.colors(
+        unfocusedContainerColor = Color.White,
+        focusedContainerColor = Color.White,
+    )
     val colors = OutlinedTextFieldDefaults.colors(
         unfocusedContainerColor = Color.White,
         focusedContainerColor = Color.White,
@@ -249,4 +253,16 @@ fun TextFieldColor(): TextFieldColors {
         disabledBorderColor = Color(122, 122, 122),
     )
     return colors
+}
+
+@Composable
+fun TextFieldColor(): TextFieldColors {
+    val color = TextFieldDefaults.colors(
+        unfocusedContainerColor = Color.White,
+        focusedContainerColor = Color.White,
+        focusedIndicatorColor = Color.Transparent,
+        unfocusedIndicatorColor = Color.Transparent
+    )
+
+    return color
 }

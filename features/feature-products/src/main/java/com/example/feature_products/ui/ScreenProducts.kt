@@ -72,15 +72,16 @@ import com.example.feature_products.util.getSingleImageLoader
 import kotlinx.coroutines.launch
 
 
-
-
-
 @OptIn(
     ExperimentalCoilApi::class, ExperimentalMaterial3Api::class,
     ExperimentalFoundationApi::class
 )
 @Composable
-fun ScreenProducts(vm: ViewModelProducts, drawerState: DrawerState, navigate: (DestinationProperty) -> Unit) {
+fun ScreenProducts(
+    vm: ViewModelProducts,
+    drawerState: DrawerState,
+    navigate: (DestinationProperty) -> Unit
+) {
     val listProducts = vm.products.collectAsLazyPagingItems()
     val filterState = vm.stateFilter.collectAsState()
     val stateBasket = vm.statePropertyBasket.collectAsState(initial = null)

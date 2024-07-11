@@ -14,11 +14,11 @@
             <option value="$PROJECT_DIR$/authorization/api" />
             <option value="$PROJECT_DIR$/authorization/data" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/components-ui" />
             <option value="$PROJECT_DIR$/core/database-local-user" />
-            <option value="$PROJECT_DIR$/core/extensions-ui" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/feature-authorization" />
-            <option value="$PROJECT_DIR$/features/feature-main" />
+            <option value="$PROJECT_DIR$/features/feature-products" />
             <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/main/api" />
             <option value="$PROJECT_DIR$/main/data" />

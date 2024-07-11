@@ -35,9 +35,7 @@ class ViewModelProducts @Inject constructor(
     val stateFilter: StateFlow<FilterDataState> = _stateDataFilter
 
     val statePropertyBasket = apiRepozitoryProducts.getProductsToBasket(null).map { it.toStatePropertyBasket() }
-   init {
-       Log.d("##$@##@","INITE")
-   }
+
     fun onEventsProduct(eventsProduct: EventsProduct) {
         job.cancel()
         when (eventsProduct) {

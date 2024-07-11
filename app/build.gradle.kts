@@ -104,7 +104,7 @@ dependencies {
     implementation(
         project(":features:feature-authorization")
     )
-    implementation(project(":features:feature-main"))
+    implementation(project(":features:feature-products"))
     implementation(
         project(":main:data")
     )

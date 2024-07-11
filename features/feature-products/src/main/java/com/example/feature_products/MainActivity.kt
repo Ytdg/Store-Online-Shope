@@ -6,10 +6,17 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.core.view.WindowCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -23,6 +30,7 @@ import com.example.DestinationProperty
 import com.example.extensions_ui.endTransition
 import com.example.feature_products.ui.ScreenProduct
 import com.example.feature_products.ui.ScreenProducts
+import com.example.feature_products.ui.ScreenProfile
 import com.example.feature_products.ui.components_products_screen.NavDrawer
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,7 +41,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         enableEdgeToEdge()
         setContent {
-            NavScreen()
+           ScreenProfile()
         }
     }
 
@@ -44,7 +52,7 @@ class MainActivity : ComponentActivity() {
         val navDrawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
         val navigate = remember {
             { destinationProperty: DestinationProperty ->
-                    navController.onNavigate(destinationProperty)
+                navController.onNavigate(destinationProperty)
             }
         }
         NavHost(
@@ -101,13 +109,13 @@ fun NavController.onNavigate(destinationProperty: DestinationProperty) {
 
     when (destinationProperty.destination) {
         is Destination.ScreenProducts -> {
-            if(currentDestination!!.route!=Destination.ScreenProducts.baseRoute) {
+            if (currentDestination!!.route != Destination.ScreenProducts.baseRoute) {
                 popBackStack()
             }
         }
 
         is Destination.ScreenProduct -> {
-            if(currentDestination!!.route!=Destination.ScreenProduct.baseRoute+"{id}") {
+            if (currentDestination!!.route != Destination.ScreenProduct.baseRoute + "{id}") {
                 navigate(destinationProperty.endRoute)
             }
         }

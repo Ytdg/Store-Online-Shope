@@ -5,6 +5,7 @@ import com.example.autorizationapi.AutorizationApi
 import com.example.autorizationapi.buildApi
 import com.example.database.DataBaseLocalUser
 import com.example.database.databaseBuilder
+import com.example.storeonline.API_KEY_AUTHORISATION
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,6 +26,6 @@ object authorization{
     @Provides
     @Singleton
     fun authorizationApi(): AutorizationApi {
-        return buildApi(baseUrl = "http://192.168.0.105:3128/")
+        return buildApi(baseUrl = API_KEY_AUTHORISATION)
     }
 }

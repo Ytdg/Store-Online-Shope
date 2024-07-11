@@ -8,6 +8,7 @@ import com.example.api.builderApiProducts
 import com.example.data.RepozitoryProducts
 import com.example.database.DataBaseProducts
 import com.example.database.dataBaseProductsBuilder
+import com.example.storeonline.API_KEY_PRODUCTS
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,7 +23,7 @@ object main {
     @Provides
     @Singleton
      fun apiProducts(): ApiProducts {
-        return builderApiProducts(baseUrl = "https://api.escuelajs.co/api/v1/")
+        return builderApiProducts(baseUrl = API_KEY_PRODUCTS)
     }
 
     @Provides

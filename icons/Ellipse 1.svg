@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20.0" height="20.0" viewBox="145.079123959477 353.50000000000006 20.0 20.0" preserveAspectRatio="none">
+  <g>
+    <defs>
+      <ellipse cx="155.079123959477" cy="363.50000000000006" rx="10.0" ry="10.0" id="s-Ellipse_1-bc009-path"></ellipse>
+    </defs>
+    <g style="mix-blend-mode:normal">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#s-Ellipse_1-bc009-path" fill="#EDAA4B" fill-opacity="1.0"></use>
+      <text text-anchor="middle" x="155.079123959477" y="355.95068359375006" style="font-family:&quot;Arial&quot;;font-weight:&quot;400&quot;;" font-size="14.0" fill="#FFFFFF" id="s-Ellipse_1-bc009">
+        <tspan style="font-family:&quot;Arial&quot;;font-weight:&quot;400&quot;;" font-size="14.0" fill="#FFFFFF" dy="0.0" x="155.079123959477">+</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

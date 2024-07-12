@@ -1,11 +1,11 @@
 package com.example.storeonline.modules
 
 import android.content.Context
-import com.example.api.ApiProducts
-import com.example.api.ApiRepozitoryProduct
-import com.example.api.ApiRepozitoryProducts
-import com.example.api.builderApiProducts
-import com.example.data.RepozitoryProducts
+import com.example.api_network.products.ApiProducts
+import com.example.api_repository.api_products.ApiRepozitoryProduct
+import com.example.api_repository.api_products.ApiRepozitoryProducts
+import com.example.api_network.products.builderApiProducts
+import com.example.data.products.RepozitoryProducts
 import com.example.database.DataBaseProducts
 import com.example.database.dataBaseProductsBuilder
 import com.example.storeonline.API_KEY_PRODUCTS
@@ -34,7 +34,7 @@ object main {
 
     @Provides
     @Singleton
-    fun apiReposzitoryProducts(repozitoryProducts: RepozitoryProducts):ApiRepozitoryProducts {
+    fun apiReposzitoryProducts(repozitoryProducts: RepozitoryProducts): ApiRepozitoryProducts {
         return  repozitoryProducts
     }
     @Provides
